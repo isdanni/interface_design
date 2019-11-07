@@ -12,16 +12,21 @@ void setup() {
 }
 
 void draw() {
-  stroke(255, 255, 255);
+  loadImage("ppp.jpg");
+  // detect  color
+  color c = get(mouseX, mouseY);
+  stroke(c);
+  strokeWeight(4);
   if (mousePressed == true) {
     line(mouseX, mouseY, pmouseX, pmouseY);
    }
   
 }
 
-void line() {
-    stroke(255);
-   if (mousePressed == true) {
+void mousePressed() {
+  stroke(255);
+  strokeWeight(10);
+  if (mousePressed == true) {
     line(mouseX, mouseY, pmouseX, pmouseY);
    }
 }
